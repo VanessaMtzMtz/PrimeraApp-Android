@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Ejercicio1</string>
+    <string name="titulo">Por favor, ingresa tus datos</string>
+    <string name="hintName">Tu nombre</string>
+    <string name="hintEmail">tucorreo@ejemplo.com</string>
+    <string name="hintFecha">Tu fecha de nacimiento</string>
+    <string name="hintCuenta">Tu número de cuenta</string>
+    <string name="txtIngresa">Ingresa</string>
 </resources>

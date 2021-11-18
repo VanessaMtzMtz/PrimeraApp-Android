@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo1"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,16 +13,16 @@
         android:layout_height="74dp"
         android:fontFamily="@font/adelia"
         android:rotation="-4"
-        android:text="Por favor, Ingresa tus datos"
+        android:text="@string/titulo"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_red_light"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.328" />
 
     <EditText
         android:id="@+id/etFecha"
@@ -30,17 +30,17 @@
         android:layout_height="48dp"
         android:ems="10"
         android:fontFamily="@font/cottonbutter"
-        android:hint="Tu fecha de nacimiento"
+        android:hint="@string/hintFecha"
         android:inputType="date"
         android:minHeight="48dp"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.654" />
 
     <EditText
         android:id="@+id/etCorreo"
@@ -48,7 +48,7 @@
         android:layout_height="61dp"
         android:ems="10"
         android:fontFamily="@font/cottonbutter"
-        android:hint="tucorreo@ejemplo.com"
+        android:hint="@string/hintEmail"
         android:inputType="textEmailAddress"
         android:maxLength="30"
         android:minHeight="48dp"
@@ -56,10 +56,10 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <EditText
         android:id="@+id/etNombre"
@@ -67,7 +67,7 @@
         android:layout_height="57dp"
         android:ems="10"
         android:fontFamily="@font/cottonbutter"
-        android:hint="Tu nombre"
+        android:hint="@string/hintName"
         android:inputType="textPersonName"
         android:maxLength="30"
         android:minHeight="48dp"
@@ -75,10 +75,10 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.299" />
+        app:layout_constraintVertical_bias="0.477" />
 
     <EditText
         android:id="@+id/etNumCuenta"
@@ -86,7 +86,7 @@
         android:layout_height="56dp"
         android:ems="10"
         android:fontFamily="@font/cottonbutter"
-        android:hint="Tu número de cuenta"
+        android:hint="@string/hintCuenta"
         android:inputType="number"
         android:maxLength="9"
         android:minHeight="48dp"
@@ -94,10 +94,10 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.699" />
+        app:layout_constraintVertical_bias="0.746" />
 
     <Button
         android:id="@+id/btnIngresa"
@@ -105,15 +105,16 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/holo_orange_light"
         android:fontFamily="@font/manisbanget"
-        android:text="Ingresa"
+        android:onClick="clickButton"
+        android:text="@string/txtIngresa"
         android:textAllCaps="false"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintVertical_bias="0.852" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
