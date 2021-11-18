@@ -7,4 +7,81 @@
     android:background="@drawable/fondo2"
     tools:context=".MainActivity2">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="126dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="@font/manisbanget"
+        android:text="@string/txtRegresa"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989" />
+
+    <TextView
+        android:id="@+id/tvAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/karate"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941"
+        tools:text="@string/difAnim" />
+
+    <TextView
+        android:id="@+id/tvSaludo"
+        android:layout_width="310dp"
+        android:layout_height="83dp"
+        android:fontFamily="@font/cottonbutter"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242"
+        tools:text="Hola nombre, tu correo es correo@gmail.com y tu número de cuenta es 123456789" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="311dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/cottonbutter"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357"
+        tools:text="Naciste el 01/02/1998" />
+
+    <TextView
+        android:id="@+id/tvEdad"
+        android:layout_width="310dp"
+        android:layout_height="63dp"
+        android:fontFamily="@font/cottonbutter"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.429"
+        tools:text="Tu edad es 23, por lo tanto tu animal en el horoscopo chino es:" />
 </androidx.constraintlayout.widget.ConstraintLayout>
