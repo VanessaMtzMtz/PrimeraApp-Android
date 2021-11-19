@@ -25,20 +25,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun clickButton(view: View) {
+    fun clickButton(view: View) {//Botón ingresar
         if(etNombre.text.toString()!= "" && etCorreo.text.toString() != "" &&
             etFecha.text.toString() != "" && etNumCuenta.text.toString() != ""){
-            val intent = Intent(this,MainActivity2::class.java)
             val nombreUs = etNombre.text.toString()
             val correoUs = etCorreo.text.toString()
             val fechaNac = etFecha.text.toString()
             val numCuenta = etNumCuenta.text.toString()
-            val edad = calculoEdad(fechaNac)
+            val edadUs = calculoEdad(fechaNac)
 
             //Para enviar los datos del usuario a nuestro otro Activity
-            val parametros = Bundle()
-            //parametros.putString("textPersonName")
-            intent.putExtras(parametros)
+            val intent = Intent(this,MainActivity2::class.java)
+            intent.putExtra("nombre",nombreUs)
+            intent.putExtra("correo",correoUs)
+            intent.putExtra("fecha",fechaNac)
+            intent.putExtra("cuenta",numCuenta)
+            intent.putExtra("edad",edadUs.toString())
+
             startActivity(intent)
         }else{
             Toast.makeText(this, "No dejes ningun campo vacío",Toast.LENGTH_LONG).show()
@@ -48,10 +51,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun calculoEdad(fecha: String): Int{
-        val fechaNacDate:Date=SimpleDateFormat("dd/mm/yyyy").parse(fecha)
+        lateinit var fechaNacDate:Date
+        try{
+            fechaNacDate=SimpleDateFormat("dd/mm/yyyy").parse(fecha)
+        }
+        catch(e:Exception){
+            Toast.makeText(this, "El formato de fecha no es correcto",Toast.LENGTH_LONG).show()
+        }
         val fechaActual=Date(System.currentTimeMillis())
-
-        return 1
+        val diferenciaFechasMili = fechaActual.getTime()-fechaNacDate.getTime()
+        val segundos= diferenciaFechasMili/1000
+        val minutos= segundos/60
+        var horas=minutos/60
+        var dias = horas/24
+        var años= dias/365
+        return años.toInt()
     }
 
 }
