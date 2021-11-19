@@ -20,10 +20,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/tvAnimal"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"
+        app:layout_constraintVertical_bias="0.971"
         tools:text="@string/difAnim" />
 
     <TextView
@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.242"
-        tools:text="Hola nombre, tu correo es correo@gmail.com y tu número de cuenta es 123456789" />
+        tools:text="@string/txtSaludo" />
 
     <TextView
         android:id="@+id/tvFecha"
@@ -69,7 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.432"
-        tools:text="Naciste el 01/02/1998, por lo tanto tu animal en el horóscopo chino es:" />
+        tools:text="@string/txtNaciste" />
 
     <TextView
         android:id="@+id/tvEdad"
@@ -85,5 +85,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.359"
-        tools:text="Tu edad es:" />
+        tools:text="@string/txtEdad" />
+
+    <ImageView
+        android:id="@+id/animalHor"
+        android:layout_width="275dp"
+        android:layout_height="244dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819"
+        app:srcCompat="@drawable/tigre" />
 </androidx.constraintlayout.widget.ConstraintLayout>

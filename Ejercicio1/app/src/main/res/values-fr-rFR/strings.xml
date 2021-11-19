@@ -9,4 +9,7 @@
     <string name="txtIngresa">Entrer dans</string>
     <string name="txtRegresa">Rendre</string>
     <string name="difAnim">Animal</string>
+    <string name="txtSaludo">Bonjour nom, votre email est mail@gmail.com et votre numéro de compte est 123456789</string>
+    <string name="txtEdad">Votre âge est :</string>
+    <string name="txtNaciste">Vous êtes né le 01/02/1998, votre animal dans l\'horoscope chinois est donc :</string>
 </resources>
