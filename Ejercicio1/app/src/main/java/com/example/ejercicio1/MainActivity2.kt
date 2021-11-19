@@ -30,6 +30,7 @@ class MainActivity2 : AppCompatActivity() {
         val fecha = getIntent().getStringExtra("fecha")
         val cuenta = getIntent().getStringExtra("cuenta")
         val edad = getIntent().getStringExtra("edad")
+        val añoChino = getIntent().getStringExtra("añoChino")
 
         tvSaludo.setText("Hola "+ nombre +", tu correo es: "+ correo + ", y tu número de cuenta es: "+ cuenta)
         tvEdad.setText("Tu edad es: "+ edad)

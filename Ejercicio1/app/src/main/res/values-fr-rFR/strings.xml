@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Horoscope</string>
+    <string name="titulo">Veuillez saisir vos coordonnées</string>
+    <string name="hintName">Entrez votre nom</string>
+    <string name="hintEmail">tonadressemail@exemple.com</string>
+    <string name="hintFecha">Choisissez votre date de naissance -></string>
+    <string name="hintCuenta">Entrez votre numéro de compte</string>
+    <string name="txtIngresa">Entrer dans</string>
+    <string name="txtRegresa">Rendre</string>
+    <string name="difAnim">Animal</string>
+</resources>

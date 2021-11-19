@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etFecha: TextView
     private lateinit var etNumCuenta: EditText
     private lateinit var butCalendar: Button
-    val fActual=Date(System.currentTimeMillis())
-    var añoActual:Int =0
-    var mesActual:Int =0
-    var diaActual:Int =0
+    private val fActual=Date(System.currentTimeMillis())
+    private var añoActual:Int =0
+    private var mesActual:Int =0
+    private var diaActual:Int =0
     var edad:Int =0
     var añoChino:Int =0
 
@@ -36,15 +36,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fechaActual(fActual: Date) {
-        var formatoFActual = SimpleDateFormat("dd/mm/yyyy")
-        var formatoAActual = SimpleDateFormat("yyyy")
-        var formatoMActual = SimpleDateFormat("mm")
-        var formatoDActual = SimpleDateFormat("dd")
+        val formatoAActual = SimpleDateFormat("yyyy")
+        val formatoMActual = SimpleDateFormat("mm")
+        val formatoDActual = SimpleDateFormat("dd")
 
-        var fActualCompleta = formatoFActual.format(Date())
-        var aActual = formatoAActual.format(Date())
-        var mActual = formatoMActual.format(Date())
-        var dActual = formatoDActual.format(Date())
+        val aActual = formatoAActual.format(Date())
+        val mActual = formatoMActual.format(Date())
+        val dActual = formatoDActual.format(Date())
 
         añoActual = Integer.parseInt(aActual)
         mesActual = Integer.parseInt(mActual)
@@ -60,19 +58,16 @@ class MainActivity : AppCompatActivity() {
         butCalendar.setOnClickListener{
             val datePickerDialog = DatePickerDialog(
                 this, DatePickerDialog.OnDateSetListener { datePicker, año, mes, dia ->
-                    etFecha.text ="$dia / $mes / $año"
+                    etFecha.text ="$dia / $mes  / $año"
                     añoChino= año
-                    var NAño: Int = añoActual - año
-                    var NMes: Int = (mesActual * 30) + diaActual
-                    var NDias: Int = (mes * 30) + dia + 30
-                    var resFDias: Int = NMes - NDias
-                    var diasActualesT: Int = ((añoActual * 12) * 30) + (mesActual * 30) + (diaActual)
-                    var diasCumplidos: Int = ((año * 12) * 30) + (mes * 30) + (dia)
-
+                    val nAño: Int = añoActual - año
+                    val nMes: Int = ((mesActual * 30) + diaActual)
+                    val nDias: Int = (mes * 30) + dia + 30
+                    val resFDias: Int = nMes - nDias
                     if (resFDias < 0) {
                         etFecha.text = "Fecha inválida"
                     } else {
-                        edad = NAño
+                        edad = nAño
                     }
                 }, año, mes, dia)
             datePickerDialog.show()
