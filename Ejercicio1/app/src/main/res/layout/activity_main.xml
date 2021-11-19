@@ -26,8 +26,8 @@
 
     <EditText
         android:id="@+id/etFecha"
-        android:layout_width="307dp"
-        android:layout_height="48dp"
+        android:layout_width="363dp"
+        android:layout_height="59dp"
         android:ems="10"
         android:fontFamily="@font/cottonbutter"
         android:hint="@string/hintFecha"
