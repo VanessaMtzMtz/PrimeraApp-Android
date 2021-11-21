@@ -56,9 +56,8 @@ class MainActivity : AppCompatActivity() {
         val año = calendario.get(Calendar.YEAR)
 
         butCalendar.setOnClickListener{
-            val datePickerDialog = DatePickerDialog(
-                this, DatePickerDialog.OnDateSetListener { datePicker, año, mes, dia ->
-                    etFecha.text ="$dia / $mes  / $año"
+            val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener {
+                    datePicker, año, mes, dia -> etFecha.text ="$dia / ${mes+1} / $año"
                     añoChino= año
                     val nAño: Int = añoActual - año
                     val nMes: Int = ((mesActual * 30) + diaActual)
