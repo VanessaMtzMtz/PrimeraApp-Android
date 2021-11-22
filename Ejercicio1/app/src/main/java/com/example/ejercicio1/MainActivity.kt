@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun fechaActual(fActual: Date) {
         val formatoAActual = SimpleDateFormat("yyyy")
-        val formatoMActual = SimpleDateFormat("mm")
+        val formatoMActual = SimpleDateFormat("MM")
         val formatoDActual = SimpleDateFormat("dd")
 
-        val aActual = formatoAActual.format(Date())
-        val mActual = formatoMActual.format(Date())
-        val dActual = formatoDActual.format(Date())
+        val aActual = formatoAActual.format(fActual)
+        val mActual = formatoMActual.format(fActual)
+        val dActual = formatoDActual.format(fActual)
 
         añoActual = Integer.parseInt(aActual)
         mesActual = Integer.parseInt(mActual)
@@ -59,21 +59,26 @@ class MainActivity : AppCompatActivity() {
             val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener {
                     datePicker, año, mes, dia -> etFecha.text ="$dia / ${mes+1} / $año"
                     añoChino= año
-                    val nAño: Int = añoActual - año
-                    val nMes: Int = ((mesActual * 30) + diaActual)
-                    val nDias: Int = (mes * 30) + dia + 30
-                    val resFDias: Int = nMes - nDias
-                    if (resFDias < 0) {
-                        etFecha.text = "Fecha inválida"
-                    } else {
-                        edad = nAño
+                    if((mes+1)<mesActual){
+                        edad=(añoActual-año)
+                    }
+                    else {
+                        if ((mes+1) > mesActual) {
+                            edad = (añoActual - año) - 1
+                        }
+                        else {
+                            if (dia <= diaActual) {
+                                edad = (añoActual - año)
+                            }
+                            else {
+                                edad = (añoActual - año) - 1
+                            }
+                        }
                     }
                 }, año, mes, dia)
             datePickerDialog.show()
         }
     }
-
-
 
     fun clickButton(view: View) {//Botón ingresar
         if(etNombre.text.toString()!= "" && etCorreo.text.toString() != "" &&
@@ -98,26 +103,5 @@ class MainActivity : AppCompatActivity() {
         }else{
             Toast.makeText(this, "No dejes ningun campo vacío",Toast.LENGTH_LONG).show()
         }
-
-
     }
-
-    /*fun calculoEdad(fecha: String): Int{
-        lateinit var fechaNacDate:Date
-        try{
-            fechaNacDate=SimpleDateFormat("dd/mm/yyyy").parse(fecha)
-        }
-        catch(e:Exception){
-            Toast.makeText(this, "El formato de fecha no es correcto",Toast.LENGTH_LONG).show()
-        }
-        val fActual=Date(System.currentTimeMillis())
-        val diferenciaFechasMili = fechaActual.getTime()-fechaNacDate.getTime()
-        val segundos= diferenciaFechasMili/1000
-        val minutos= segundos/60
-        var horas=minutos/60
-        var dias = horas/24
-        var años= dias/365
-        return años.toInt()
-    }*/
-
 }
